@@ -1,6 +1,6 @@
 /*
 Clase principal main
- */
+ /*
 
 package com.mycompany.clase6e1;
 
@@ -9,7 +9,10 @@ public class Clase6E1 {
     public static void main(String[] args) {
         String password;
         Persona empleado = new Persona();
+        Persona alumno = new Persona();
+        Persona profesor = new Persona();
         
+        empleado.setClave("pollitos");
         System.out.println(empleado.getClave());
     }
 }
@@ -22,7 +25,7 @@ package com.mycompany.clase6e1;
 public class Persona {
     public String nombre;
     public int edad;
-    private String clave = "RsPty01";
+    private String clave = "";
     public int i;
 
     public String getNombre() {
