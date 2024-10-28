@@ -1,0 +1,53 @@
+/*
+Clase principal main
+ */
+
+package com.mycompany.clase6e1;
+
+public class Clase6E1 {
+
+    public static void main(String[] args) {
+        String password;
+        Persona empleado = new Persona();
+        
+        System.out.println(empleado.getClave());
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+/*
+ Clase persona
+ */
+package com.mycompany.clase6e1;
+
+public class Persona {
+    public String nombre;
+    public int edad;
+    private String clave = "RsPty01";
+    public int i;
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getClave() {
+        String asteriscos = "";
+        
+        for (i=0; i<clave.length(); i++)
+            asteriscos=asteriscos + "*";
+        return (asteriscos);
+    }
+    public void setClave(String clave){
+        if (clave.length()<8)
+            System.out.println("No cumple con longitud mínima (8 caracteres)");
+        else
+            if (false)
+                System.out.println("Verifique los caracteres consecutivos ");
+            else
+                this.clave = clave;
+    }
+ 
+}
