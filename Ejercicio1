@@ -9,9 +9,9 @@ public class Clase6E1 {
     public static void main(String[] args) {
         String password;
         Persona empleado = new Persona();
-        Persona alumno = new Persona();
-        Persona profesor = new Persona();
         
+        empleado.tipoCambio = 600;
+        System.out.println(empleado.MostrarTipoCambio());
         empleado.setClave("pollitos");
         System.out.println(empleado.getClave());
     }
@@ -25,8 +25,13 @@ package com.mycompany.clase6e1;
 public class Persona {
     public String nombre;
     public int edad;
-    private String clave = "";
+    private String clave = "RsPty01";
+    public static double tipoCambio = 510;
     public int i;
+    
+    public double MostrarTipoCambio() {
+        return tipoCambio;
+    }
 
     public String getNombre() {
         return nombre;
